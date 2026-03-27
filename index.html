@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ingria Airpusher Fixed Gear</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+
+<!--idk why sir pero ga guba ang LED SCREEN DESIGN ko every time gina migrate ko-->
+<style>
+body {
+    margin: 0;
+    font-family: 'Oswald', sans-serif;
+    background: #fff;
+}
+
+<!--FIRST IMAGE-->
+.hero {
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+}
+
+.hero-text h1 {
+    font-size: 60px;
+    margin: 0;
+}
+
+.hero-text h2 {
+    font-size: 30px;
+    margin: 0;
+}
+
+<!--LED SIGN-->
+
+.led-container {
+    width: 100%;
+    height: 40px;
+    overflow: hidden;
+    border: 2px solid #400000;
+    background: #000;
+    margin: 0px 0;
+}
+
+.led-strip {
+    display: inline-flex;
+    white-space: nowrap;
+    animation: scroll 12s linear infinite;
+    background: #000;
+}
+
+.led-strip .message {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 2rem;
+    font-family: 'Courier New', monospace;
+    font-size: 1.2rem;
+    color: #ff0000;
+    letter-spacing: 0.1rem;
+    text-shadow:
+        0 0 1px #ff0000,
+        0 0 3px #ff4d4d,
+        0 0 5px #ff6666;
+    white-space: nowrap;
+}
+
+.separator {
+    width: 0.5rem;
+    height: 40px;
+    margin: 0 0.2rem;
+    border-radius: 50%;
+    background: #ff0000;
+    box-shadow:
+        0 0 2px #ff0000,
+        0 0 4px #ff4d4d,
+        0 0 6px #ff6666;
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.content {
+    padding: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+<!--FIXIE TITLE-->
+
+.fixie-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    font-size: 15vw;
+    text-align: center;
+    margin: 0;
+    line-height: 1;
+}
+.center-paragraph {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    padding: 50px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.center-paragraph p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.image-container {
+    position: relative;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: left;
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    background: rgba(0,0,0,0.5);
+    padding: 20px;
+    border-radius: 10px;
+    max-height: 90%; 
+    overflow-y: auto;
+}
+
+.contact-info {
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    margin: 50px auto;
+    max-width: 600px;
+    padding: 20px;
+}
+
+.contact-info h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-info li {
+    font-size: 18px;
+    margin: 8px 0;
+}
+
+.contact-info a {
+    color: #000;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+</style>
+</head>
+
+<body>
+
+    <!--Intro-->
+<div class="hero">
+  <img src="img/y.jpg" alt="Ingria Airpusher" width="1280">
+  <div class="hero-text">
+    <h1>Ingria Airpusher</h1>
+    <h2>A Fixed Gear Experience</h2>
+  </div>
+</div>
+
+<!--LED SCREEN DESIGN-->
+<div class="led-container">
+    <div class="led-strip">
+
+        <!-- REPEAT THE SAME MESSAGE 4–5 TIMES IN A ROW -->
+        <div class="message">
+            Live life reasonably dangerous <span class="separator"></span>
+        </div>
+        <div class="message">
+            Live life reasonably dangerous <span class="separator"></span>
+        </div>
+        <div class="message">
+            Live life reasonably dangerous <span class="separator"></span>
+        </div>
+        <div class="message">
+            Live life reasonably dangerous <span class="separator"></span>
+        </div>
+
+        <!-- DUPLICATE AGAIN FOR SEAMLESS LOOP -->
+        <div class="message">
+            Live life reasonably dangerous <span class="separator"></span>
+        </div>
+        <div class="message">
+            Live life reasonably dangerous <span class="separator"></span>
+        </div>
+        <div class="message">
+            Live life reasonably dangerous <span class="separator"></span>
+        </div>
+        <div class="message">
+            Live life reasonably dangerous <span class="separator"></span>
+        </div>
+
+    </div>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+
+<!--WHAT THE PRODUCT IS ABOUT-->
+  <h2>What is the INGRIA AIRPUSHER?</h2>
+
+<div style="display: flex; align-items: flex-start; gap: 20px; padding-left: 40px;">
+  <img src="img/m.jpg" alt="Ingria Airpusher" style="width:200px; height:auto;">
+
+  <p>
+    The Ingria Airpusher is a fixed-gear track frame designed with a strong focus on speed, stiffness, and aggressive riding performance. Originating from Russia, it reflects traditional velodrome geometry while being adapted for urban street use. One of its most defining characteristics is its compact and aggressive geometry, featuring a short wheelbase that allows for quick acceleration and highly responsive handling, though it may feel less stable at slower speeds. The frame also exhibits noticeable toe overlap, a common trait in track bikes, where the rider’s foot can come into contact with the front wheel during tight turns. In addition, the Airpusher uses steep frame angles and a low front end, with a short head tube that places the rider in a more aerodynamic, forward-leaning position, improving efficiency but reducing comfort on longer rides.
+  </p>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+
+<div style="display: flex; align-items: flex-start; gap: 20px;">
+  <img src="img/ll.jpg" alt="Ingria Airpusher" style="width:1280px; height:auto;">
+</div>
+
+<!-- Full-screen "WHAT IS A FIXIE?" section -->
+<section class="fixie-title">
+  WHAT IS A FIXIE?
+</section>
+
+<!-- Paragraph section -->
+<section class="center-paragraph">
+  <p>
+    A fixed-gear bike, often called a “fixie,” is a type of bicycle that has a drivetrain with no freewheel mechanism, meaning the pedals are directly connected to the motion of the rear wheel. Unlike standard bicycles, where the rider can coast without pedaling, on a fixed-gear bike the pedals continue to move whenever the bike is in motion. This direct connection gives the rider a unique sense of control and feedback from the road, allowing for precise speed adjustments, efficient pedaling, and even braking using leg resistance. Fixed-gear bikes are simple in design, often having fewer components than geared bicycles, which makes them lighter, easier to maintain, and visually minimalistic.
+  </p>
+  <p>
+    Fixed-gear bicycles are popular both on the track and in urban environments due to their responsiveness and simplicity. On velodromes, riders use fixed-gear bikes for racing because the direct drive allows for maximum power transfer and precise handling at high speeds. In cities, fixies are appreciated for their low maintenance, reliability, and the skillful riding style they encourage, including techniques like skidding and controlling speed through pedal resistance. However, riding a fixed-gear bike requires practice and attention, as it demands constant pedaling and careful handling, especially at low speeds or during sudden stops. Overall, fixed-gear bikes offer a unique combination of efficiency, simplicity, and connection between the rider and the road, appealing to both performance-focused cyclists and enthusiasts of minimalist bike culture.
+  </p>
+</section>
+
+<!--MORE CONVINCING TACTIS-->
+<div style="display: flex; align-items: flex-start; gap: 20px; padding-left: 80px;">
+  <img src="img/x.jpg" alt="Ingria Airpusher" style="width:400px; height:auto;">
+
+  <p>
+  If you want a bike that's simple, fast, and brutally responsive, a fixed-gear is the way to go, and the Ingria Airpusher takes it to the next level. Its aggressive geometry, stiff frame, and precise handling make it perfect for riders who love speed, control, and mastering their every pedal stroke. Unlike ordinary bikes, it’s built to transfer every ounce of power directly to the wheels, handle skids and sprints, and stand up to street or track abuse—making it not just a bike, but a statement in performance and style.
+ </p>
+ <br>
+ <p>The Ingria Airpusher frame has some serious pros: it’s ultra stiff, so every pedal stroke hits the road; aggressive geometry for insane handling and quick sprints; short wheelbase makes it super responsive; reinforced joints and gussets for durability during skids and hard riding; and a high bottom bracket that gives excellent corner clearance. Basically, it’s built for speed, control, and abuse.
+</p>
+</div>
+
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+
+ <!--BUTTON TO BUY THE ACTUAL PRODUCT-->
+<div style="text-align: center;">
+    <a href="https://ingriabikes.com/">
+        <img src="img/s.jpg" alt="Click here to buy" width="150" height="150">
+    </a>
+</div>
+
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+
+ <!--FAQs-->
+<div class="image-container">
+  <img src="img/m.jpg" alt="Ingria Airpusher">
+  <div class="overlay-text">
+    <p><strong>Q1:</strong> What type of bike is the Ingria Airpusher designed for?<br>
+    <strong>A1:</strong> It’s a fixed-gear, track-style frame built for aggressive street riding and sprinting, ideal for experienced riders who want speed and precision.</p>
+
+    <p><strong>Q2:</strong> What makes its geometry unique?<br>
+    <strong>A2:</strong> The Airpusher has a short wheelbase, steep frame angles, and a compact triangle design, giving it ultra-responsive handling, stiffness, and quick acceleration.</p>
+
+    <p><strong>Q3:</strong> Is it suitable for beginners?<br>
+    <strong>A3:</strong> Not really; its aggressive geometry and high responsiveness make it better for riders who are comfortable on a fixed-gear bike and confident in handling sharp turns and skids.</p>
+
+    <p><strong>Q4:</strong> Can it handle street abuse?<br>
+    <strong>A4:</strong> Yes, reinforced joints, gussets, and a high bottom bracket make it durable for skidding, sprinting, and harsh urban riding.</p>
+
+    <p><strong>Q5:</strong> What riding style does it favor?<br>
+    <strong>A5:</strong> The Airpusher is perfect for sprinting, track-style riding, and skilled urban riders who want maximum control and power transfer.</p>
+
+    <p><strong>Q6:</strong> Does it come with brake mounts?<br>
+    <strong>A6:</strong> No, it’s a true track frame, so it doesn’t have brake mounts—speed and control rely on pedal resistance and rider skill.</p>
+
+    <p><strong>Q7:</strong> Why should I choose the Airpusher over other fixie frames?<br>
+    <strong>A7:</strong> Its combination of stiffness, aggressive geometry, and reinforced construction makes it stand out for riders seeking performance, precision, and durability in one sleek package.</p>
+  </div>
+</div>
+
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+
+ <!--Contact Info-->
+ <section class="contact-info">
+  <h2>Contact Us</h2>
+  <p>📧 For orders and inquiries, reach out to us via email:</p>
+  <ul>
+    <li><a href="mailto:fixedgearlab@gmail.com">fixedgearlab@gmail.com</a></li>
+    <li><a href="mailto:ingriaracing@gmail.com">ingriaracing@gmail.com</a></li>
+  </ul>
+</section>
+
+</body>
+</html>
